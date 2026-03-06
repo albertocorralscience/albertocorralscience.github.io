@@ -385,9 +385,9 @@ team:
     role: "Visiting PhD Student"
     affiliation: "Bern University (host: Uppsala University)"
     since: "2025"
-    status: current
+    status: alumni
     photo: ""   # filename of their photo e.g. "bruno.jpg"
-    bio: "Main supervisor: Prof. Barbara Taborsky. Visiting for international research collaboration."
+    bio: "PhD supervisors: Prof. Barbara Taborsky. Visiting for international research collaboration."
 
   # EXAMPLE — copy this block to add a new team member:
   # - name: "New Student Name"
