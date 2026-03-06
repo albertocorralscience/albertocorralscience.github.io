@@ -699,14 +699,9 @@ function render(data) {
         </div>
       </div>
       <div class="hero-visual fade">
-        <div class="photo-container">
-          <div class="photo-placeholder">
-            <span>🐟</span>
-            <span>Add your photo</span>
-            <span style="font-size:.7rem;opacity:.7">Replace with &lt;img&gt; tag</span>
-          </div>
-        </div>
-        <img src="Wordcloud_AC_titles.png" alt="Research word cloud" style="width:100%; max-width:300px; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.1);"/>
+        <img src="Wordcloud_AC_titles.png" alt="Research word cloud"
+             style="width:100%; max-width:480px; border-radius:16px;
+                    box-shadow:0 8px 32px rgba(0,0,0,0.12);"/>
       </div>
     </section>
 
@@ -720,6 +715,10 @@ function render(data) {
         <div class="about-grid">
           <div class="about-body fade"><p>${s.about || data.about}</p></div>
           <div class="about-sidebar fade">
+            <img src="ProfilePic.jpg" alt="Alberto Corral-Lopez"
+                 style="width:100%; max-width:220px; border-radius:12px;
+                        box-shadow:0 6px 24px rgba(0,0,0,0.12);
+                        margin-bottom:1.4rem; display:block;"/>
             <div class="sidebar-block">
               <div class="sidebar-label">Links</div>
               <a href="mailto:${s.email}">✉️ ${s.email}</a>
