@@ -156,6 +156,931 @@
 
     /* ── SECTIONS ── */
     section { padding: 5rem 5vw; }
+    #research, #team { background:var(--bg); }
+    #news, #publications, #contact { background:var(--bg2); }
+    #join { background: var(--teal); }
+
+    /* ── PI CARD in team section ── */
+    .pi-card {
+      display:grid; grid-template-columns:180px 1fr;
+      gap:2.5rem; align-items:start;
+      background:white; border:1px solid var(--sand);
+      border-radius:16px; padding:2rem;
+      margin-bottom:2.5rem;
+      position:relative; overflow:hidden;
+    }
+    .pi-card::before {
+      content:'PI';
+      position:absolute; top:1rem; right:1.2rem;
+      font-size:0.7rem; font-weight:700; letter-spacing:0.1em;
+      color:var(--teal); text-transform:uppercase;
+      background: rgba(45,125,111,0.1);
+      padding:0.2rem 0.6rem; border-radius:99px;
+    }
+    .pi-photo {
+      width:100%; aspect-ratio:1;
+      border-radius:12px; object-fit:cover;
+      box-shadow:0 6px 24px rgba(0,0,0,0.1);
+    }
+    .pi-photo-placeholder {
+      width:100%; aspect-ratio:1;
+      border-radius:12px;
+      background:linear-gradient(135deg, var(--sand), #c8bfb0);
+      display:flex; align-items:center; justify-content:center;
+      font-size:3rem;
+    }
+    .pi-info h3 {
+      font-family:'Playfair Display',serif;
+      font-size:1.3rem; margin-bottom:0.2rem;
+    }
+    .pi-role { font-size:0.82rem; color:var(--teal); font-weight:600; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:1rem; }
+    .pi-bio { font-size:0.92rem; color:var(--ink-mid); margin-bottom:1.2rem; }
+    .pi-links { display:flex; flex-wrap:wrap; gap:0.6rem; }
+    .pi-link {
+      font-size:0.8rem; color:var(--teal); text-decoration:none;
+      font-weight:500; display:flex; align-items:center; gap:0.3rem;
+    }
+    .pi-link:hover { color:var(--orange); }
+    .pi-link::before { content:'→'; }
+
+    /* ── JOIN US ── */
+    #join .sec-eyebrow { color: rgba(255,255,255,0.7); }
+    #join .sec-eyebrow::before { background: rgba(255,255,255,0.5); }
+    #join .sec-title { color: white; }
+    #join .sec-title em { color: var(--accent-yellow, #e8b84b); }
+    .join-intro { color: rgba(255,255,255,0.85); font-size:1.05rem; max-width:640px; margin-bottom:2.5rem; }
+    .join-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:1.2rem; margin-bottom:2.5rem; }
+    .join-card {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius:12px; padding:1.6rem;
+      color:white;
+      transition: background .2s;
+    }
+    .join-card:hover { background: rgba(255,255,255,0.18); }
+    .join-card-icon { font-size:1.8rem; margin-bottom:0.8rem; }
+    .join-card h3 { font-family:'Playfair Display',serif; font-size:1.05rem; margin-bottom:0.5rem; }
+    .join-card p { font-size:0.88rem; color:rgba(255,255,255,0.8); }
+    .join-cta {
+      display:inline-block; padding:0.8rem 2rem;
+      background:white; color:var(--teal);
+      border-radius:4px; font-weight:600; font-size:0.9rem;
+      text-decoration:none; letter-spacing:0.04em;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .join-cta:hover { transform:translateY(-2px); box-shadow:0 6px 20px rgba(0,0,0,0.15); }
+
+    .sec-header { margin-bottom:3rem; }
+    .sec-eyebrow {
+      font-size:0.75rem; font-weight:600; letter-spacing:0.12em;
+      text-transform:uppercase; color:var(--orange);
+      display:flex; align-items:center; gap:0.5rem;
+      margin-bottom:0.5rem;
+    }
+    .sec-eyebrow::before { content:''; width:24px; height:2px; background:var(--orange); }
+    .sec-title {
+      font-family:'Playfair Display',serif;
+      font-size:clamp(1.8rem,3vw,2.4rem);
+      font-weight:700; color:var(--ink);
+    }
+    .sec-title em { font-style:italic; color:var(--teal); }
+    .max-w { max-width:1000px; margin:0 auto; }
+
+    /* ── ABOUT ── */
+    .about-grid { display:grid; grid-template-columns:2fr 1fr; gap:4rem; align-items:start; }
+    .about-body p { color:var(--ink-mid); margin-bottom:1.2rem; font-size:1rem; }
+    .about-sidebar {}
+    .sidebar-block { margin-bottom:2rem; }
+    .sidebar-label {
+      font-size:0.72rem; font-weight:600; letter-spacing:0.1em;
+      text-transform:uppercase; color:var(--ink-light); margin-bottom:0.8rem;
+    }
+    .sidebar-block a {
+      display:flex; align-items:center; gap:0.5rem;
+      color:var(--teal); text-decoration:none; font-size:0.88rem;
+      font-weight:500; margin-bottom:0.4rem;
+    }
+    .sidebar-block a:hover { color:var(--orange); }
+
+    /* ── RESEARCH ── */
+    .research-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fill, minmax(280px,1fr));
+      gap:1.4rem;
+    }
+    .proj-card {
+      background:white; border:1px solid var(--sand);
+      border-radius:12px; overflow:hidden;
+      transition:transform .2s, box-shadow .2s;
+      position:relative;
+      display:flex; flex-direction:column;
+    }
+    .proj-card::after {
+      content:''; position:absolute;
+      bottom:0; left:0; right:0; height:3px;
+    }
+    .proj-card.teal::after { background:var(--teal); }
+    .proj-card.orange::after { background:var(--orange); }
+    .proj-card.green::after { background:var(--green); }
+    .proj-card.yellow::after { background:var(--yellow); }
+    .proj-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(0,0,0,0.08); }
+
+    /* Photo header — shown only when a photo is set */
+    .proj-photo {
+      width:100%; height:160px;
+      object-fit:cover; display:block;
+      border-bottom:1px solid var(--sand);
+    }
+    .proj-photo-placeholder {
+      width:100%; height:160px;
+      background: linear-gradient(135deg, var(--sand) 0%, #c8bfb0 100%);
+      display:flex; align-items:center; justify-content:center;
+      font-size:3rem; border-bottom:1px solid var(--sand);
+    }
+    .proj-body { padding:1.6rem; flex:1; display:flex; flex-direction:column; }
+    .proj-card h3 { font-family:'Playfair Display',serif; font-size:1rem; margin-bottom:0.6rem; }
+    .proj-card p { font-size:0.88rem; color:var(--ink-mid); flex:1; }
+    .proj-tags { margin-top:1rem; display:flex; flex-wrap:wrap; gap:0.4rem; }
+    .tag {
+      font-size:0.7rem; padding:0.2rem 0.65rem;
+      border-radius:99px; background:var(--bg);
+      color:var(--ink-mid); font-weight:600;
+    }
+
+    /* ── NEWS ── */
+    .news-grid { display:grid; gap:1rem; }
+    .news-item {
+      display:grid; grid-template-columns:90px 1fr;
+      gap:1.2rem; align-items:start;
+      padding:1.2rem 1.4rem;
+      background:white; border:1px solid var(--sand);
+      border-radius:10px; transition:border-color .2s;
+    }
+    .news-item:hover { border-color:var(--teal-light); }
+    .news-date { font-size:0.78rem; color:var(--ink-light); font-weight:600; padding-top:0.2rem; }
+    .news-badge {
+      display:inline-block; font-size:0.68rem; font-weight:600;
+      letter-spacing:0.06em; text-transform:uppercase;
+      padding:0.15rem 0.55rem; border-radius:99px;
+      margin-bottom:0.3rem;
+    }
+    .badge-grant { background:#d4edda; color:#1a5c2e; }
+    .badge-paper { background:#d0e8f5; color:#0d4870; }
+    .badge-talk  { background:#fdecd0; color:#7a3e00; }
+    .badge-award { background:#f5e0f5; color:#5c1a6e; }
+    .badge-position { background:#e0f5f0; color:#0d5c42; }
+    .badge-other { background:var(--bg); color:var(--ink-mid); }
+    .news-title { font-weight:600; font-size:0.95rem; margin-bottom:0.2rem; }
+    .news-text  { font-size:0.85rem; color:var(--ink-mid); }
+
+    /* ── PUBLICATIONS ── */
+    .pub-list { display:flex; flex-direction:column; gap:1rem; }
+    .pub-item {
+      display:grid; grid-template-columns:52px 1fr;
+      gap:1rem; align-items:start;
+      padding:1.3rem 1.4rem;
+      background:white; border:1px solid var(--sand);
+      border-radius:10px; transition:border-color .2s;
+    }
+    .pub-item:hover { border-color:var(--orange-light); }
+    .pub-year { font-family:'Playfair Display',serif; font-size:0.88rem; color:var(--orange); font-weight:700; padding-top:0.15rem; }
+    .pub-title { font-style:italic; font-size:0.97rem; margin-bottom:0.3rem; color:var(--ink); }
+    .pub-authors { font-size:0.82rem; color:var(--ink-mid); margin-bottom:0.2rem; }
+    .pub-journal { font-size:0.8rem; color:var(--ink-light); }
+    .pub-journal strong { color:var(--teal); }
+    .pub-link { display:inline-block; margin-top:0.4rem; font-size:0.78rem; color:var(--teal); text-decoration:none; font-weight:600; }
+    .pub-link:hover { text-decoration:underline; }
+    .scholar-link { text-align:center; margin-top:2rem; }
+
+    /* ── TEAM ── */
+    .team-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1.2rem; }
+    .person-card {
+      background:white; border:1px solid var(--sand);
+      border-radius:12px; padding:1.4rem;
+      text-align:center; transition:transform .2s;
+    }
+    .person-card:hover { transform:translateY(-3px); }
+    .person-avatar {
+      width:72px; height:72px; border-radius:50%;
+      background:var(--sand); margin:0 auto 0.8rem;
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.8rem; overflow:hidden;
+    }
+    .person-avatar img { width:100%; height:100%; object-fit:cover; }
+    .person-name { font-family:'Playfair Display',serif; font-size:1rem; margin-bottom:0.2rem; }
+    .person-role { font-size:0.78rem; color:var(--teal); font-weight:600; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.4rem; }
+    .person-since { font-size:0.75rem; color:var(--ink-light); margin-bottom:0.5rem; }
+    .person-bio { font-size:0.82rem; color:var(--ink-mid); }
+
+    .alumni-section { margin-top:4rem; }
+    .alumni-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem; font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 2px solid var(--sand);
+      display: flex; align-items: center; gap: 0.8rem;
+    }
+    .alumni-title::before {
+      content: '';
+      display: inline-block;
+      width: 4px; height: 1.4rem;
+      background: var(--orange);
+      border-radius: 2px;
+    }
+    .alumni-list { display:flex; flex-direction:column; gap:0.6rem; }
+    .alumni-item {
+      display:flex; justify-content:space-between; align-items:center;
+      padding:0.7rem 1rem; background:white; border:1px solid var(--sand);
+      border-radius:8px; font-size:0.88rem;
+    }
+    .alumni-item .aname { font-weight:600; }
+    .alumni-item .arole { color:var(--ink-mid); font-size:0.8rem; }
+    .alumni-item .ayears { color:var(--ink-light); font-size:0.78rem; }
+
+    /* ── CONTACT ── */
+    #contact { text-align:center; }
+    .contact-intro { color:var(--ink-mid); font-size:1rem; max-width:520px; margin:0 auto 2.5rem; }
+    .contact-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1rem; max-width:700px; margin:0 auto; }
+    .contact-card {
+      background:white; border:1px solid var(--sand);
+      border-radius:12px; padding:1.4rem 1rem;
+      text-decoration:none; color:var(--ink);
+      transition:all .2s; display:flex;
+      flex-direction:column; align-items:center; gap:0.4rem;
+    }
+    .contact-card:hover { transform:translateY(-3px); border-color:var(--teal-light); }
+    .contact-icon { font-size:1.5rem; }
+    .contact-label { font-size:0.75rem; font-weight:600; color:var(--ink-mid); text-transform:uppercase; letter-spacing:0.06em; }
+    .contact-value { font-size:0.8rem; color:var(--ink-light); word-break:break-all; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align:center; padding:1.8rem;
+      background:var(--ink); color:var(--ink-light); font-size:0.8rem;
+    }
+    footer a { color:var(--sand); }
+
+    /* ── FADE IN ── */
+    .fade { opacity:0; transform:translateY(20px); transition:opacity .5s ease, transform .5s ease; }
+    .fade.in { opacity:1; transform:none; }
+
+    /* ── LOADING ── */
+    #loading {
+      position:fixed; inset:0; background:var(--bg);
+      display:flex; align-items:center; justify-content:center;
+      z-index:999; transition:opacity .4s;
+    }
+    #loading .spinner {
+      width:36px; height:36px;
+      border:3px solid var(--sand);
+      border-top-color:var(--teal);
+      border-radius:50%;
+      animation: spin .8s linear infinite;
+    }
+    @keyframes spin { to { transform:rotate(360deg); } }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:768px){
+      nav { padding:.9rem 4vw; }
+      .nav-links { display:none; }
+      .nav-mobile-toggle { display:block; }
+      .nav-links.open {
+        display:flex; flex-direction:column;
+        position:absolute; top:100%; left:0; right:0;
+        background:var(--bg2); border-bottom:1px solid var(--sand);
+        padding:1rem 4vw; gap:1rem;
+      }
+      #hero { grid-template-columns:1fr; padding:6rem 4vw 3rem; }
+      .hero-visual { order:-1; }
+      .stat-row { max-width:260px; }
+      .about-grid { grid-template-columns:1fr; gap:2rem; }
+      section { padding:3.5rem 4vw; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="loading"><div class="spinner"></div></div>
+
+<nav id="nav">
+  <div class="nav-name" id="nav-name">Alberto Corral-Lopez</div>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#research">Research</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#join">Join Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-mobile-toggle" onclick="document.getElementById('nav-links').classList.toggle('open')">☰</button>
+</nav>
+
+<!-- All sections rendered by JS below -->
+<div id="app"></div>
+
+<footer id="footer"></footer>
+
+<script>
+// ─────────────────────────────────────────────
+// YAML is embedded here as a JS string so the
+// page works when opened as a local file too.
+// When hosted on GitHub Pages, it fetches the
+// actual content.yaml file automatically.
+// ─────────────────────────────────────────────
+
+const YAML_CONTENT = `
+site:
+  name: "Alberto Corral-Lopez"
+  title: "Researcher in Evolutionary Biology"
+  institution: "Department of Ecology and Genetics, Uppsala University"
+  location: "Uppsala, Sweden"
+  email: "alberto.corral@ebc.uu.se"
+  orcid: "0000-0001-7784-0209"
+  google_scholar: "https://scholar.google.com/citations?user=YOURID"
+  twitter: ""
+  tagline: "Understanding the neural and molecular bases of mating decisions and social behavior"
+
+stats:
+  - number: "21"
+    label: "Publications"
+  - number: "13"
+    label: "H-index"
+  - number: "746"
+    label: "Citations"
+  - number: "7+"
+    label: "Research Grants"
+
+about: >
+  I am a researcher at the Department of Ecology and Genetics at Uppsala University,
+  working on the mechanisms underlying mating diversity and the neural basis of social
+  behavior. My research integrates behavioral quantification, neuroanatomy, genomics,
+  and transcriptomics to understand how and why mating systems and social behaviors
+  evolve. I use fish — particularly guppies and water striders — as model systems,
+  combining experimental evolution, deep-learning behavioral tracking, and comparative
+  transcriptomics. I was recently awarded a Starting Grant from the Swedish Research
+  Council to investigate the genetic architecture of dynamic mating decisions in water
+  striders. I completed my PhD at Stockholm University and held postdoctoral positions
+  at University College London and the University of British Columbia.
+
+research:
+  - title: "Genetic architecture of dynamic mating decisions"
+    emoji: "🪲"
+    color: "teal"
+    photo: ""   # e.g. "img/waterstrider.jpg" — leave empty to show emoji instead
+    link: ""    # optional URL to a project page or key paper
+    description: >
+      Funded by a Swedish Research Council Starting Grant, this project investigates
+      how mating tactics evolve across social environments in water striders. We integrate
+      behavioral experiments, causal tests of gene expression–behavior relationships,
+      and comparative transcriptomics across sexes and species.
+    tags: ["Water striders", "Genomics", "Mating tactics", "VR Council Grant"]
+  - title: "Neural basis of collective behavior"
+    emoji: "🐟"
+    color: "orange"
+    photo: ""
+    link: ""
+    description: >
+      Using guppies selectively bred for schooling behavior, we identified how evolution
+      of coordinated motion is linked to changes in brain anatomy and gene regulatory
+      architecture — particularly in genes involved in neuronal migration and synaptic
+      processes within the social decision-making network.
+    tags: ["Schooling", "Neuroanatomy", "Transcriptomics", "Nat Comm / Nat Eco Evo"]
+  - title: "Predation-driven evolution of social cognition"
+    emoji: "🧠"
+    color: "green"
+    photo: ""
+    link: ""
+    description: >
+      Funded by the Birgitta Sintring Foundation, we examine how strong selective
+      pressure from predation shapes molecular changes underlying social cognition,
+      using guppies bred for survival and the cooperatively breeding cichlid
+      Neolamprologus pulcher to dissect social hierarchy mechanisms.
+    tags: ["Predation", "Social cognition", "Cichlids", "Gene regulation"]
+  - title: "Brain size, cognition & sexual selection"
+    emoji: "💡"
+    color: "yellow"
+    photo: ""
+    link: ""
+    description: >
+      A long-standing research direction using experimentally evolved guppy lines
+      to show that enhanced cognitive ability associated with larger brains alters
+      mating decisions — providing mechanistic evidence that cognitive evolution
+      can shape sexual selection dynamics.
+    tags: ["Brain size", "Guppies", "Sexual selection", "Science Advances"]
+  - title: "Computer vision across evolutionary systems"
+    emoji: "👁️"
+    color: "teal"
+    photo: ""
+    link: ""
+    description: >
+      Applied computational phenotyping to diverse systems: quantifying flight pattern
+      mimicry in Neotropical glasswing butterflies, risk-taking behavior in amphibians,
+      and deep-learning-based tracking of fish behavior for high-resolution behavioral
+      quantification.
+    tags: ["Computer vision", "Deep learning", "Mimicry", "Amphibians"]
+
+news:
+  - date: "2025"
+    title: "Swedish Research Council Starting Grant awarded"
+    text: "Awarded 4,800,000 SEK to investigate the molecular evolution of mating tactics in water striders."
+    type: "grant"
+  - date: "2025"
+    title: "Birgitta Sintring Foundation grant"
+    text: "Awarded 398,000 SEK for The molecular basis of predation-driven social behavior."
+    type: "grant"
+  - date: "2024"
+    title: "Invited keynote at 3rd Joint Congress on Evolution"
+    text: "Keynote speaker at the Symposium on Genomics of Mate Choice, Montpellier."
+    type: "talk"
+  - date: "2024"
+    title: "New paper in Nature Ecology and Evolution"
+    text: "Published findings on functional convergence of genomic and transcriptomic architecture underlying sociability in guppies."
+    type: "paper"
+  - date: "2023"
+    title: "New paper in Nature Communications"
+    text: "Evolution of schooling drives changes in neuroanatomy and motion characteristics across predation contexts."
+    type: "paper"
+
+publications:
+  - year: "2025"
+    title: "Deep learning reveals the role of copy number variation in the genetic architecture of a highly polymorphic sexual trait"
+    authors: "van der Bijl W., Shu J., Goberdhan V., ..., Corral-Lopez A, Mank J.E."
+    journal: "Nature Ecology and Evolution"
+    doi: "10.1038/s41559-025-02655-9"
+  - year: "2025"
+    title: "Social interaction with females modulates context-dependent male guppy mating tactics for female receptivity"
+    authors: "Goberdhan V., van der Bijl W., Darolti I., Mank J.E., & Corral-Lopez A."
+    journal: "Ecology and Evolution"
+    doi: "10.1002/ece3.72582"
+  - year: "2025"
+    title: "Metamorphosis reverses the behavioural phenotype in moor frogs across a latitudinal gradient"
+    authors: "Cortazar-Chinarro M.*, Corral-Lopez A.*, Luquet E., ... & Laurila A."
+    journal: "Ecology and Evolution"
+    doi: ""
+  - year: "2025"
+    title: "Collective decision-making under predator threat is faster in guppy shoals selected for larger telencephalon size"
+    authors: "Boussard A., Ahlkvist M., Corral-Lopez A., Fong S., Fitzpatrick J., & Kolm N."
+    journal: "Animal Cognition"
+    doi: ""
+  - year: "2024"
+    title: "Functional convergence of genomic and transcriptomic architecture underlies sociability in a livebearing fish"
+    authors: "Corral-Lopez A., Bloch N.I., van der Bijl W., ... Kolm N. & Mank J.E."
+    journal: "Nature Ecology and Evolution"
+    doi: "10.1038/s41559-023-02278-0"
+  - year: "2023"
+    title: "Evolution of schooling drives changes in neuroanatomy and motion characteristics across predation contexts in guppies"
+    authors: "Corral-Lopez A., Kotrschal A., Szorkovszky A., ... Mank J.E. & Kolm N."
+    journal: "Nature Communications"
+    doi: "10.1038/s41467-023-41765-9"
+  - year: "2021"
+    title: "Field evidence for colour mimicry overshadowing morphological mimicry"
+    authors: "Corral-Lopez A., Varg J.E., Cano-Cobos Y.P., Losada R., Realpe E., & Outomuro D."
+    journal: "Journal of Animal Ecology"
+    doi: "10.1111/1365-2656.13397"
+  - year: "2020"
+    title: "Brain size affects responsiveness in mating behavior to variation in predation pressure and sex-ratio"
+    authors: "Corral-Lopez A., Romensky M., Kotrschal A., Buechel S.D. & Kolm N."
+    journal: "Journal of Evolutionary Biology"
+    doi: "10.1111/jeb.13567"
+  - year: "2018"
+    title: "Early neurogenomic response associated with variation in guppy female mate preference"
+    authors: "Bloch N., Corral-Lopez A., Buechel S.D., Kotrschal A., Kolm N. & Mank J.E."
+    journal: "Nature Ecology and Evolution"
+    doi: "10.1038/s41559-018-0682-4"
+  - year: "2017"
+    title: "Female brain size affects the assessment of male attractiveness during mate choice"
+    authors: "Corral-Lopez A., Bloch N., Kotrschal A., van der Bijl W., Buechel S., Mank J. & Kolm N."
+    journal: "Science Advances"
+    doi: "10.1126/sciadv.1601990"
+
+team:
+  - name: "Melvin Jose"
+    role: "MSc Student"
+    affiliation: "Uppsala University"
+    since: "2025"
+    status: current
+    photo: ""
+    bio: "Working on [project description — edit this in content.yaml]."
+
+  - name: "Bruno Camargo dos Santos"
+    role: "Visiting PhD Student"
+    affiliation: "Bern University"
+    since: "2025"
+    ended: "2025"
+    status: alumni
+    photo: ""
+    bio: "Main supervisor: Prof. Barbara Taborsky. International research visit at Uppsala University."
+
+  - name: "Alumni Student Two"
+    role: "MSc Student"
+    affiliation: "Uppsala University"
+    since: "2024"
+    ended: "2025"
+    status: alumni
+    photo: ""
+    emoji: "🤖"
+    bio: "MSc project on deep learning approaches for automated behavioural quantification."
+
+  - name: "Alumni Student Three"
+    role: "MSc Student"
+    affiliation: "Uppsala University"
+    since: "2024"
+    ended: "2025"
+    status: alumni
+    photo: ""
+    emoji: "🧬"
+    bio: "MSc project on PCR-based genotyping of candidate genes underlying mating behaviour."
+`;
+
+// ─────────────────────────────────────────────
+// RENDER ENGINE
+// ─────────────────────────────────────────────
+
+function badgeClass(type) {
+  const map = { grant:'badge-grant', paper:'badge-paper', talk:'badge-talk', award:'badge-award', position:'badge-position' };
+  return map[type] || 'badge-other';
+}
+
+function render(data) {
+  const s = data.site;
+  document.title = `Corral-Lopez Lab — Behavioural Genomics, Uppsala University`;
+  document.getElementById('nav-name').textContent = 'Corral-Lopez Lab';
+
+  const statsHTML = (data.stats||[]).map(st => `
+    <div class="stat-box">
+      <div class="n">${st.number}</div>
+      <div class="l">${st.label}</div>
+    </div>`).join('');
+
+  const researchHTML = (data.research||[]).map(p => `
+    <div class="proj-card ${p.color} fade">
+      ${p.photo
+        ? `<img class="proj-photo" src="${p.photo}" alt="${p.title}"/>`
+        : `<div class="proj-photo-placeholder">${p.emoji}</div>`
+      }
+      <div class="proj-body">
+        <h3>${p.title}</h3>
+        <p>${p.description}</p>
+        <div class="proj-tags">${(p.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+        ${p.link ? `<a href="${p.link}" target="_blank" class="pub-link" style="margin-top:.8rem">→ Learn more</a>` : ''}
+      </div>
+    </div>`).join('');
+
+  const newsHTML = (data.news||[]).map(n => `
+    <div class="news-item fade">
+      <div class="news-date">${n.date}</div>
+      <div>
+        <span class="news-badge ${badgeClass(n.type)}">${n.type}</span>
+        <div class="news-title">${n.title}</div>
+        <div class="news-text">${n.text}</div>
+      </div>
+    </div>`).join('');
+
+  const pubsHTML = (data.publications||[]).map(p => {
+    const linkHref = p.url || (p.doi ? `https://doi.org/${p.doi}` : '');
+    const linkLabel = p.doi ? `DOI: ${p.doi}` : '→ Read paper';
+    return `
+    <div class="pub-item fade">
+      <div class="pub-year">${p.year}</div>
+      <div>
+        <div class="pub-title">${p.title}</div>
+        <div class="pub-authors">${p.authors}</div>
+        <div class="pub-journal"><strong>${p.journal}</strong></div>
+        ${linkHref ? `<a href="${linkHref}" target="_blank" class="pub-link">${linkLabel}</a>` : '<span class="pub-link" style="color:var(--ink-light);cursor:default">Link coming soon</span>'}
+      </div>
+    </div>`;
+  }).join('');
+
+  const currentTeam = (data.team||[]).filter(m=>m.status==='current');
+  const alumni      = (data.team||[]).filter(m=>m.status==='alumni');
+
+  const teamHTML = currentTeam.map(m => `
+    <div class="person-card fade">
+      <div class="person-avatar">
+        ${m.photo ? `<img src="${m.photo}" alt="${m.name}"/>` : '🧬'}
+      </div>
+      <div class="person-name">${m.name}</div>
+      <div class="person-role">${m.role}</div>
+      <div class="person-since">${m.affiliation} · Since ${m.since}</div>
+      <div class="person-bio">${m.bio}</div>
+    </div>`).join('');
+
+  const alumniHTML = alumni.length ? `
+    <div class="alumni-section">
+      <div class="alumni-title">Alumni</div>
+      <div class="team-grid">
+        ${alumni.map(m=>`
+          <div class="person-card fade">
+            <div class="person-avatar">
+              ${m.photo ? `<img src="${m.photo}" alt="${m.name}"/>` : (m.emoji || '🎓')}
+            </div>
+            <div class="person-name">${m.name}</div>
+            <div class="person-role">${m.role}</div>
+            <div class="person-since">${m.affiliation} · ${m.since}${m.ended ? '–'+m.ended : ''}</div>
+            <div class="person-bio">${m.bio}</div>
+          </div>`).join('')}
+      </div>
+    </div>` : '';
+
+  const contactLinks = [
+    { icon:'✉️', label:'Email', value: s.email, href:`mailto:${s.email}` },
+    { icon:'🔗', label:'ORCID', value: s.orcid, href:`https://orcid.org/${s.orcid}` },
+    { icon:'🎓', label:'Google Scholar', value:'View profile', href: s.google_scholar },
+    s.twitter ? { icon:'🐦', label:'Twitter / X', value: s.twitter, href:`https://twitter.com/${s.twitter.replace('@','')}` } : null,
+  ].filter(Boolean);
+
+  const contactHTML = contactLinks.map(c=>`
+    <a href="${c.href}" target="_blank" class="contact-card fade">
+      <span class="contact-icon">${c.icon}</span>
+      <span class="contact-label">${c.label}</span>
+      <span class="contact-value">${c.value}</span>
+    </a>`).join('');
+
+  document.getElementById('app').innerHTML = `
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-text fade">
+        <div class="hero-eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Uppsala University · Department of Ecology and Genetics</span></div>
+        <h1>Corral-Lopez<br><em>Lab</em></h1>
+        <p class="hero-role">Behavioural Genomics & Evolutionary Biology</p>
+        <p class="hero-inst">PI: Alberto Corral-Lopez · ${s.institution}</p>
+        <p class="hero-tagline">${s.tagline}</p>
+        <div class="hero-actions">
+          <a href="#research" class="btn btn-teal">Our research</a>
+          <a href="#join" class="btn btn-outline">Join the lab</a>
+        </div>
+      </div>
+      <div class="hero-visual fade">
+        <img src="Wordcloud_AC_titles.png" alt="Research word cloud"
+             style="width:100%; max-width:480px; border-radius:16px;
+                    box-shadow:0 8px 32px rgba(0,0,0,0.12);"/>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research">
+      <div class="max-w">
+        <div class="sec-header fade">
+          <div class="sec-eyebrow">What we work on</div>
+          <h2 class="sec-title">Research <em>projects</em></h2>
+        </div>
+        <div class="research-grid">${researchHTML}</div>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section id="news">
+      <div class="max-w">
+        <div class="sec-header fade">
+          <div class="sec-eyebrow">Latest updates</div>
+          <h2 class="sec-title">Lab <em>news</em></h2>
+        </div>
+        <div class="news-grid">${newsHTML}</div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+      <div class="max-w">
+        <div class="sec-header fade">
+          <div class="sec-eyebrow">Our work</div>
+          <h2 class="sec-title">Selected <em>publications</em></h2>
+        </div>
+        <div class="pub-list">${pubsHTML}</div>
+        <div class="scholar-link fade">
+          <a href="${s.google_scholar}" target="_blank" class="btn btn-outline">View full list on Google Scholar →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM (includes PI) -->
+    <section id="team">
+      <div class="max-w">
+        <div class="sec-header fade">
+          <div class="sec-eyebrow">People</div>
+          <h2 class="sec-title">The <em>team</em></h2>
+        </div>
+
+        <!-- PI card -->
+        <div class="pi-card fade">
+          <div>
+            <img src="ProfilePic.jpg" alt="Alberto Corral-Lopez" class="pi-photo"/>
+          </div>
+          <div class="pi-info">
+            <h3>Alberto Corral-Lopez</h3>
+            <div class="pi-role">Principal Investigator</div>
+            <p class="pi-bio">${s.about || data.about}</p>
+            <div class="pi-links">
+              <a href="mailto:${s.email}" class="pi-link">${s.email}</a>
+              <a href="https://orcid.org/${s.orcid}" target="_blank" class="pi-link">ORCID</a>
+              <a href="${s.google_scholar}" target="_blank" class="pi-link">Google Scholar</a>
+              ${s.twitter ? `<a href="https://twitter.com/${s.twitter.replace('@','')}" target="_blank" class="pi-link">Twitter</a>` : ''}
+            </div>
+          </div>
+        </div>
+
+        <!-- Lab members -->
+        ${currentTeam.length ? `<div class="team-grid">${teamHTML}</div>` : ''}
+        ${alumniHTML}
+      </div>
+    </section>
+
+    <!-- JOIN US -->
+    <section id="join">
+      <div class="max-w">
+        <div class="sec-header fade">
+          <div class="sec-eyebrow">Opportunities</div>
+          <h2 class="sec-title">Join the <em>lab</em></h2>
+        </div>
+        <p class="join-intro">
+          We are always looking for curious, motivated people to join us. Our lab offers a
+          collaborative and supportive environment at the intersection of behavioural ecology,
+          neuroscience, and genomics. We welcome applications at all levels.
+        </p>
+        <div class="join-grid">
+          <div class="join-card fade">
+            <div class="join-card-icon">🎓</div>
+            <h3>MSc Students</h3>
+            <p>We offer research projects in behavioural genomics and evolutionary biology.
+               Projects can be tailored to your interests within our research themes.
+               Contact us with your CV and a short description of your interests.</p>
+          </div>
+          <div class="join-card fade">
+            <div class="join-card-icon">🔬</div>
+            <h3>PhD Students</h3>
+            <p>PhD positions are advertised when funding is available. If you are interested
+               in applying for external fellowships to join the lab, we strongly encourage
+               you to get in touch early to discuss project ideas.</p>
+          </div>
+          <div class="join-card fade">
+            <div class="join-card-icon">🧪</div>
+            <h3>Postdocs</h3>
+            <p>We welcome applications from postdoctoral researchers interested in pursuing
+               independent or collaborative projects. We are happy to support applications
+               for fellowships such as EMBO, Marie Curie, or Swedish VR grants.</p>
+          </div>
+        </div>
+        <a href="mailto:${s.email}" class="join-cta fade">Get in touch →</a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="max-w">
+        <div class="sec-header fade">
+          <div class="sec-eyebrow">Find us</div>
+          <h2 class="sec-title">Get in <em>touch</em></h2>
+        </div>
+        <p class="contact-intro">
+          Questions about our research, potential collaborations, or joining the lab —
+          we'd love to hear from you.
+        </p>
+        <div class="contact-grid">${contactHTML}</div>
+      </div>
+    </section>
+  `;
+
+  document.getElementById('footer').innerHTML = `
+    <span style="color:var(--sand)">Corral-Lopez Lab</span> ·
+    ${s.institution} ·
+    Hosted free on <a href="https://pages.github.com">GitHub Pages</a>
+  `;
+
+  // Fade-in observer
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach((e,i) => {
+      if(e.isIntersecting) setTimeout(()=>e.target.classList.add('in'), i*60);
+    });
+  }, { threshold:0.08 });
+  document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+
+  // Hide loading
+  const loader = document.getElementById('loading');
+  loader.style.opacity = '0';
+  setTimeout(()=>loader.style.display='none', 400);
+}
+
+// ─────────────────────────────────────────────
+// BOOT: try to fetch content.yaml, fall back to embedded
+// ─────────────────────────────────────────────
+async function boot() {
+  let data;
+  try {
+    const res = await fetch('content.yaml');
+    if(res.ok) {
+      const text = await res.text();
+      data = jsyaml.load(text);
+    } else { throw new Error('no file'); }
+  } catch {
+    data = jsyaml.load(YAML_CONTENT);
+  }
+  // flatten site.about if present
+  if(!data.site.about && data.about) data.site.about = data.about;
+  render(data);
+}
+
+boot();
+</script>
+</body>
+</html>
+      padding: 8rem 5vw 5rem;
+      gap: 5vw;
+      background: var(--bg2);
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::after {
+      content:'';
+      position:absolute; bottom:-80px; right:-80px;
+      width:500px; height:500px;
+      background: radial-gradient(circle, rgba(45,125,111,0.08) 0%, transparent 70%);
+      border-radius:50%;
+      pointer-events:none;
+    }
+    .hero-eyebrow {
+      display:flex; align-items:center; gap:0.6rem;
+      margin-bottom:1.2rem;
+    }
+    .eyebrow-line { width:32px; height:2px; background:var(--teal); }
+    .eyebrow-text {
+      font-size:0.78rem; font-weight:600; letter-spacing:0.12em;
+      text-transform:uppercase; color:var(--teal);
+    }
+    .hero-text h1 {
+      font-family:'Playfair Display', serif;
+      font-size: clamp(2.6rem, 5vw, 4rem);
+      font-weight:700; line-height:1.1;
+      color:var(--ink); margin-bottom:1.2rem;
+    }
+    .hero-text h1 em { font-style:italic; color:var(--teal); }
+    .hero-role { font-size:1.05rem; color:var(--ink-mid); margin-bottom:0.3rem; }
+    .hero-inst { font-size:0.9rem; color:var(--ink-light); margin-bottom:1.8rem; }
+    .hero-tagline {
+      font-size:1rem; color:var(--ink-mid);
+      max-width:520px; margin-bottom:2.5rem;
+      border-left:3px solid var(--orange);
+      padding-left:1rem;
+      font-style:italic;
+    }
+    .hero-actions { display:flex; gap:1rem; flex-wrap:wrap; }
+    .btn {
+      display:inline-block; padding:0.72rem 1.8rem;
+      border-radius:4px; font-size:0.88rem; font-weight:600;
+      text-decoration:none; letter-spacing:0.04em;
+      transition:all .2s; cursor:pointer; border:none;
+    }
+    .btn-teal { background:var(--teal); color:white; }
+    .btn-teal:hover { background:#236358; transform:translateY(-1px); }
+    .btn-outline { background:transparent; color:var(--orange); border:2px solid var(--orange); }
+    .btn-outline:hover { background:var(--orange); color:white; }
+
+    .hero-visual {
+      position:relative; display:flex;
+      flex-direction:column; align-items:center; gap:1.5rem;
+    }
+    .photo-container {
+      width: clamp(200px,24vw,300px);
+      aspect-ratio:1;
+      border-radius:50%;
+      background:var(--sand);
+      overflow:hidden;
+      border:4px solid white;
+      box-shadow:0 16px 48px rgba(0,0,0,0.12);
+      position:relative;
+    }
+    .photo-placeholder {
+      width:100%; height:100%;
+      display:flex; flex-direction:column;
+      align-items:center; justify-content:center;
+      background:linear-gradient(135deg, #c8bfb0, #b5a898);
+      color:var(--ink-mid); font-size:0.8rem;
+      text-align:center; padding:1.5rem; gap:0.4rem;
+    }
+    .photo-placeholder span:first-child { font-size:2.5rem; }
+
+    .stat-row {
+      display:grid; grid-template-columns:repeat(2,1fr);
+      gap:0.8rem; width:100%;
+      max-width: clamp(200px,24vw,300px);
+    }
+    .stat-box {
+      background:white; border:1px solid var(--sand);
+      border-radius:10px; padding:0.9rem;
+      text-align:center;
+    }
+    .stat-box .n {
+      font-family:'Playfair Display',serif;
+      font-size:1.6rem; font-weight:700; color:var(--teal);
+    }
+    .stat-box .l {
+      font-size:0.72rem; color:var(--ink-light);
+      text-transform:uppercase; letter-spacing:0.06em;
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 5rem 5vw; }
     #about, #research, #team, #join { background:var(--bg); }
     #news, #publications, #contact { background:var(--bg2); }
     #join { background: var(--teal); }
