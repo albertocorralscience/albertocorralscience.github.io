@@ -41,7 +41,7 @@ research:
     emoji: "🧠"
     color: "yellow"
     photo: "thesis.png"
-    link: ""
+    link: "https://www.science.org/doi/full/10.1126/sciadv.1601990"
     description: >
       A long-standing research direction showing that enhanced cognitive ability associated with larger brains alters
       mating decisions. This research  been funded by the Birgitta Sintring Foundation and the Royal Swedish Academy of Sciences
@@ -52,7 +52,7 @@ research:
     emoji: "🐟"
     color: "orange"
     photo: "collective.png"
-    link: ""
+    link: "https://www.nature.com/articles/s41559-023-02249-9"
     description: >
       Funded by the Birgitta Sintring, Lars Hierta Memorial and Nilsson-Ehle Foundations, we use 
       well-established fish model systems and integrate automated high-throughput behavioral tracking, 
@@ -64,7 +64,7 @@ research:
     emoji: "👁️"
     color: "teal"
     photo: "computools.png"
-    link: ""
+    link: "https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.71945"
     description: >
       Applied computational phenotyping to diverse systems: quantifying flight pattern
       mimicry in insects, risk-taking behavior in amphibians, and tracking of fish behavior 
@@ -77,46 +77,47 @@ publications:
   # Leave both blank for papers not yet online — site will show "Link coming soon"
 
   - year: "2025"
-    title: "Deep learning reveals the role of copy number variation in the genetic architecture of a highly polymorphic sexual trait"
-    authors: "van der Bijl W., Shu J., Goberdhan V., ..., Corral-Lopez A, Mank J.E."
-    journal: "Nature Ecology and Evolution"
-    doi: "10.1038/s41559-025-02655-9"
-
-  - year: "2025"
     title: "Social interaction with females modulates context-dependent male guppy mating tactics for female receptivity"
     authors: "Goberdhan V., van der Bijl W., Darolti I., Mank J.E., & Corral-Lopez A."
     journal: "Ecology and Evolution"
     doi: "10.1002/ece3.72582"
+    
+  - year: "2025"
+    title: "Deep learning reveals the role of copy number variation in the genetic architecture of a highly polymorphic sexual trait"
+    authors: "van der Bijl W., Shu J., Goberdhan V., ..., Corral-Lopez A, Mank J.E."
+    journal: "Nature Ecology and Evolution"
+    doi: "10.1038/s41559-025-02781-w"
+
 
   - year: "2025"
     title: "Metamorphosis reverses the behavioural phenotype in moor frogs across a latitudinal gradient"
     authors: "Cortazar-Chinarro M.*, Corral-Lopez A.*, Luquet E., ... & Laurila A."
     journal: "Ecology and Evolution"
-    doi: ""
+    doi: "10.1002/ece3.71945"
 
   - year: "2025"
     title: "Collective decision-making under predator threat is faster in guppy shoals selected for larger telencephalon size"
     authors: "Boussard A., Ahlkvist M., Corral-Lopez A., Fong S., Fitzpatrick J., & Kolm N."
     journal: "Animal Cognition"
-    doi: ""
+    doi: "10.1007/s10071-025-02003-7"
 
   - year: "2024"
     title: "Functional convergence of genomic and transcriptomic architecture underlies sociability in a livebearing fish"
     authors: "Corral-Lopez A., Bloch N.I., van der Bijl W., ... Kolm N. & Mank J.E."
     journal: "Nature Ecology and Evolution"
-    doi: "10.1038/s41559-023-02278-0"
+    doi: "10.1038/s41559-023-02249-9"
 
   - year: "2023"
     title: "Evolution of schooling drives changes in neuroanatomy and motion characteristics across predation contexts in guppies"
     authors: "Corral-Lopez A., Kotrschal A., Szorkovszky A., ... Mank J.E. & Kolm N."
     journal: "Nature Communications"
-    doi: "10.1038/s41467-023-41765-9"
+    doi: "10.1038/s41467-023-41635-6"
 
   - year: "2021"
     title: "Field evidence for colour mimicry overshadowing morphological mimicry"
     authors: "Corral-Lopez A., Varg J.E., Cano-Cobos Y.P., Losada R., Realpe E., & Outomuro D."
     journal: "Journal of Animal Ecology"
-    doi: "10.1111/1365-2656.13397"
+    doi: "10.1111/1365-2656.13404Digital Object Identifier (DOI)"
 
   - year: "2020"
     title: "Brain size affects responsiveness in mating behavior to variation in predation pressure and sex-ratio"
@@ -176,12 +177,12 @@ team:
   # To move to alumni: change status: current  →  status: alumni  (and add ended: "YYYY")
 
   - name: "Melvin Jose"
-    role: "MSc Student"
+    role: "Bioinformatics MSc Student"
     affiliation: "Uppsala University"
     since: "2025"
     status: current
     photo: ""
-    bio: "Working on [project description — edit this in content.yaml]."
+    bio: "Working on transcriptomic analyses of guppy mate preference for orange coloration."
 
   - name: "Bruno Camargo dos Santos"
     role: "Visiting PhD Student"
@@ -190,27 +191,28 @@ team:
     ended: "2025"
     status: alumni
     photo: ""
+    emoji: "🧬"
     bio: "Main supervisor: Prof. Barbara Taborsky. International research visit at Uppsala University."
 
-  - name: "Alumni Student Two"
-    role: "MSc Student"
+  - name: "Ida Wettergren"
+    role: "Bioinformatics MSc Student"
     affiliation: "Uppsala University"
     since: "2024"
-    ended: "2025"
+    ended: "2024"
     status: alumni
     photo: ""
     emoji: "🤖"
-    bio: "MSc project on deep learning approaches for automated behavioural quantification."
+    bio: "MSc project on deep learning approaches for automated behavioural quantification of guppy sexual behaviors."
 
-  - name: "Alumni Student Three"
-    role: "MSc Student"
+  - name: "Anulika Onyinye Inyang"
+    role: "Immunology and Microbiology MSc Student"
     affiliation: "Uppsala University"
     since: "2024"
     ended: "2025"
     status: alumni
     photo: ""
     emoji: "🧬"
-    bio: "MSc project on PCR-based genotyping of candidate genes underlying mating behaviour."
+    bio: "MSc project on association between coloration and immunogenetics in the guppy."
   #   ended: "2025"
   #   status: alumni
   #   bio: "Now at [next position]."
