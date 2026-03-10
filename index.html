@@ -498,8 +498,8 @@ site:
   location: "Uppsala, Sweden"
   email: "alberto.corral@ebc.uu.se"
   orcid: "0000-0001-7784-0209"
-  google_scholar: "https://scholar.google.com/citations?user=YOURID"
-  twitter: ""
+  google_scholar: "https://scholar.google.com/citations?user=N4I9Dz8AAAAJ&hl=en"
+  bluesky: "@corrallopeza.bsky.social"
   tagline: "Understanding the neural and molecular bases of mating decisions and social behavior"
 
 stats:
@@ -517,7 +517,7 @@ about: >
   working on the mechanisms underlying mating diversity and the neural basis of social
   behavior. My research integrates behavioral quantification, neuroanatomy, genomics,
   and transcriptomics to understand how and why mating systems and social behaviors
-  evolve. I use fish — particularly guppies and water striders — as model systems,
+  evolve. I use fish - particularly guppies and water striders - as model systems,
   combining experimental evolution, deep-learning behavioral tracking, and comparative
   transcriptomics. I was recently awarded a Starting Grant from the Swedish Research
   Council to investigate the genetic architecture of dynamic mating decisions in water
@@ -528,12 +528,12 @@ research:
   - title: "Genetic architecture of dynamic mating decisions"
     emoji: "🪲"
     color: "teal"
-    photo: ""   # e.g. "img/waterstrider.jpg" — leave empty to show emoji instead
+    photo: ""   # e.g. "img/waterstrider.jpg" - leave empty to show emoji instead
     link: ""    # optional URL to a project page or key paper
     description: >
       Funded by a Swedish Research Council Starting Grant, this project investigates
       how mating tactics evolve across social environments in water striders. We integrate
-      behavioral experiments, causal tests of gene expression–behavior relationships,
+      behavioral experiments, causal tests of gene expression-behavior relationships,
       and comparative transcriptomics across sexes and species.
     tags: ["Water striders", "Genomics", "Mating tactics", "VR Council Grant"]
   - title: "Neural basis of collective behavior"
@@ -544,7 +544,7 @@ research:
     description: >
       Using guppies selectively bred for schooling behavior, we identified how evolution
       of coordinated motion is linked to changes in brain anatomy and gene regulatory
-      architecture — particularly in genes involved in neuronal migration and synaptic
+      architecture - particularly in genes involved in neuronal migration and synaptic
       processes within the social decision-making network.
     tags: ["Schooling", "Neuroanatomy", "Transcriptomics", "Nat Comm / Nat Eco Evo"]
   - title: "Predation-driven evolution of social cognition"
@@ -566,7 +566,7 @@ research:
     description: >
       A long-standing research direction using experimentally evolved guppy lines
       to show that enhanced cognitive ability associated with larger brains alters
-      mating decisions — providing mechanistic evidence that cognitive evolution
+      mating decisions - providing mechanistic evidence that cognitive evolution
       can shape sexual selection dynamics.
     tags: ["Brain size", "Guppies", "Sexual selection", "Science Advances"]
   - title: "Computer vision across evolutionary systems"
@@ -662,7 +662,7 @@ team:
     since: "2025"
     status: current
     photo: ""
-    bio: "Working on [project description — edit this in content.yaml]."
+    bio: "Working on [project description - edit this in content.yaml]."
 
   - name: "Bruno Camargo dos Santos"
     role: "Visiting PhD Student"
@@ -788,7 +788,7 @@ function render(data) {
     { icon:'✉️', label:'Email', value: s.email, href:`mailto:${s.email}` },
     { icon:'🔗', label:'ORCID', value: s.orcid, href:`https://orcid.org/${s.orcid}` },
     { icon:'🎓', label:'Google Scholar', value:'View profile', href: s.google_scholar },
-    s.twitter ? { icon:'🐦', label:'Twitter / X', value: s.twitter, href:`https://twitter.com/${s.twitter.replace('@','')}` } : null,
+    s.bluesky ? { icon:'🦋', label:'Bluesky', value: s.bluesky, href:`https://bsky.app/profile/${s.bluesky.replace('@','')}` } : null,
   ].filter(Boolean);
 
   const contactHTML = contactLinks.map(c=>`
@@ -876,7 +876,7 @@ function render(data) {
               <a href="mailto:${s.email}" class="pi-link">${s.email}</a>
               <a href="https://orcid.org/${s.orcid}" target="_blank" class="pi-link">ORCID</a>
               <a href="${s.google_scholar}" target="_blank" class="pi-link">Google Scholar</a>
-              ${s.twitter ? `<a href="https://twitter.com/${s.twitter.replace('@','')}" target="_blank" class="pi-link">Twitter</a>` : ''}
+              ${s.bluesky ? `<a href="https://bsky.app/profile/${s.bluesky.replace('@','')}" target="_blank" class="pi-link">Bluesky</a>` : ''}
             </div>
           </div>
         </div>
@@ -902,24 +902,25 @@ function render(data) {
         <div class="join-grid">
           <div class="join-card fade">
             <div class="join-card-icon">🎓</div>
-            <h3>MSc Students</h3>
-            <p>We offer research projects in behavioural genomics and evolutionary biology.
+            <h3>Bachelor & Master Students</h3>
+            <p>We offer research projects of different length in animal behaviour, evolutionary biology and genomics.
                Projects can be tailored to your interests within our research themes.
                Contact us with your CV and a short description of your interests.</p>
           </div>
           <div class="join-card fade">
             <div class="join-card-icon">🔬</div>
             <h3>PhD Students</h3>
-            <p>PhD positions are advertised when funding is available. If you are interested
-               in applying for external fellowships to join the lab, we strongly encourage
-               you to get in touch early to discuss project ideas.</p>
+            <p>PhD positions are advertised when funding is available. Next opening will be advertised soon
+            with prospective start date in Autumn 2026.</p>
           </div>
           <div class="join-card fade">
             <div class="join-card-icon">🧪</div>
             <h3>Postdocs</h3>
             <p>We welcome applications from postdoctoral researchers interested in pursuing
                independent or collaborative projects. We are happy to support applications
-               for fellowships such as EMBO, Marie Curie, or Swedish VR grants.</p>
+               for Swedish and International fellowships and stipend programs. We can offer 
+               valuable support to understand the funding landscape and opportunities available, 
+               but we strongly encourage you to get in touch early to discuss project ideas.</p>
           </div>
         </div>
         <a href="mailto:${s.email}" class="join-cta fade">Get in touch →</a>
