@@ -88,7 +88,6 @@ publications:
     journal: "Nature Ecology and Evolution"
     doi: "10.1038/s41559-025-02781-w"
 
-
   - year: "2025"
     title: "Metamorphosis reverses the behavioural phenotype in moor frogs across a latitudinal gradient"
     authors: "Cortazar-Chinarro M.*, Corral-Lopez A.*, Luquet E., ... & Laurila A."
@@ -117,13 +116,13 @@ publications:
     title: "Field evidence for colour mimicry overshadowing morphological mimicry"
     authors: "Corral-Lopez A., Varg J.E., Cano-Cobos Y.P., Losada R., Realpe E., & Outomuro D."
     journal: "Journal of Animal Ecology"
-    doi: "10.1111/1365-2656.13404Digital Object Identifier (DOI)"
+    doi: "10.1111/1365-2656.13404"
 
   - year: "2020"
     title: "Brain size affects responsiveness in mating behavior to variation in predation pressure and sex-ratio"
     authors: "Corral-Lopez A., Romensky M., Kotrschal A., Buechel S.D. & Kolm N."
     journal: "Journal of Evolutionary Biology"
-    doi: "10.1111/jeb.13567"
+    doi: "10.1111/jeb.13556"
 
   - year: "2018"
     title: "Early neurogenomic response associated with variation in guppy female mate preference"
@@ -152,23 +151,23 @@ news:
     type: "grant"
     
   - date: "2025"
-    title: "Melvin succesfully completes his Research training"
-    text: "Succesful defense of the Research Training Gene Regulation of Male Coloration in Artificially Selected Guppies at the Evolutionary Biology program"
+    title: "Research training"
+    text: "Melvin Jose succesfully defended his research training work: Gene Regulation of Male Coloration in Artificially Selected Guppies at the Evolutionary Biology program"
     type: "other"
     
   - date: "2025"
-    title: "Melvin Jose joins the lab"
-    text: "Melvin starts a one year position during his master studies to complete a Research Training and a MsC thesis."
+    title: "New master student joins the lab"
+    text: "Melvin Jose starts a one year position during his master studies to complete a Research Training and a MsC thesis."
     type: "position"
 
   - date: "2025"
     title: "Birgitta Sintring Foundation grant"
-    text: "Awarded an extension of the grant  to investigate 'The molecular basis of predation-driven social behavior'."
+    text: "Awarded an extension of the grant to investigate 'The molecular basis of predation-driven social behavior'."
     type: "grant"
 
   - date: "2024"
-    title: "Invited talk at 3rd Joint Congress on Evolution"
-    text: "Keynote speaker at the Symposium on Genomics of Mate Choice, Montreal."
+    title: "Invited talk at 3rd Joint Congress on Evolution (ESEB and SSE)"
+    text: "Alberto is a keynote speaker at the Genomics of Mate Choice Symposium, Montreal."
     type: "talk"
 
   - date: "2024"
