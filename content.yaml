@@ -10,8 +10,8 @@ site:
   location: "Uppsala, Sweden"
   email: "alberto.corral@ebc.uu.se"
   orcid: "0000-0001-7784-0209"
-  google_scholar: "https://scholar.google.com"
-  twitter: ""   # add your handle e.g. "@albertocorral"
+  google_scholar: "https://scholar.google.com/citations?user=N4I9Dz8AAAAJ&hl=en"
+  bluesky: "@corrallopeza.bsky.social"  
   tagline: "Understanding the neural and molecular bases of mating decisions and social behavior"
 
 stats:
@@ -26,28 +26,25 @@ stats:
 
 about: >
   I am a researcher at the Department of Ecology and Genetics at Uppsala University,
-  working on the mechanisms underlying mating diversity and the neural basis of social
+  working on the mechanisms underlying mating diversity and social
   behavior. My research integrates behavioral quantification, neuroanatomy, genomics,
   and transcriptomics to understand how and why mating systems and social behaviors
-  evolve. I use fish — particularly guppies and water striders — as model systems,
-  combining experimental evolution, deep-learning behavioral tracking, and comparative
-  transcriptomics. I was recently awarded a Starting Grant from the Swedish Research
-  Council to investigate the genetic architecture of dynamic mating decisions in water
-  striders. I completed my PhD at Stockholm University and held postdoctoral positions
-  at University College London and the University of British Columbia.
+  evolve. 
+  I completed my PhD in Ethology at Stockholm University working in Niclas Kolm's lab, and held postdoctoral positions
+  at University College London and the University of British Columbia working in Judith Mank's lab.
 
 research:
-  - title: "Genetic architecture of dynamic mating decisions"
+  - title: "The molecular evolution of mating tactics in water striders"
     emoji: "🪲"
     color: "teal"
     photo: ""     # e.g. "img/waterstrider.jpg" — upload photo to GitHub, put filename here
     link: ""      # optional URL to a project page or key paper
     description: >
       Funded by a Swedish Research Council Starting Grant, this project investigates
-      how mating tactics evolve across social environments in water striders. We integrate
-      behavioral experiments, causal tests of gene expression–behavior relationships,
-      and comparative transcriptomics across sexes and species.
-    tags: ["Water striders", "Genomics", "Mating tactics", "VR Council Grant"]
+      the genetic regulation of mating behaviors in water striders. We integrate
+      behavioral experiments, computer vision methods, causal tests of gene expression–behavior relationships,
+      and comparative transcriptomics across multiple water strider species.
+    tags: ["Water striders", "Genomics", "Mating tactics"]
 
   - title: "Neural basis of collective behavior"
     emoji: "🐟"
