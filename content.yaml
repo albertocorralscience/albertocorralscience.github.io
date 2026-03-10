@@ -145,29 +145,35 @@ news:
   #   text: "A sentence or two of detail."
   #   type: "grant"   # options: grant, paper, talk, award, position, other
 
+
   - date: "2025"
     title: "Swedish Research Council Starting Grant awarded"
-    text: "Awarded 4,800,000 SEK to investigate the molecular evolution of mating tactics in water striders."
+    text: "Awarded 4,8 mSEK to investigate the molecular evolution of mating tactics in water striders."
     type: "grant"
+    
+  - date: "2025"
+    title: "Melvin succesfully completes his Research training"
+    text: "Succesful defense of the Research Training Gene Regulation of Male Coloration in Artificially Selected Guppies at the Evolutionary Biology program"
+    type: "other"
+    
+  - date: "2025"
+    title: "Melvin Jose joins the lab"
+    text: "Melvin starts a one year position during his master studies to complete a Research Training and a MsC thesis."
+    type: "position"
 
   - date: "2025"
     title: "Birgitta Sintring Foundation grant"
-    text: "Awarded 398,000 SEK for 'The molecular basis of predation-driven social behavior'."
+    text: "Awarded an extension of the grant  to investigate 'The molecular basis of predation-driven social behavior'."
     type: "grant"
 
   - date: "2024"
-    title: "Invited keynote at 3rd Joint Congress on Evolution"
-    text: "Keynote speaker at the Symposium on Genomics of Mate Choice, Montpellier."
+    title: "Invited talk at 3rd Joint Congress on Evolution"
+    text: "Keynote speaker at the Symposium on Genomics of Mate Choice, Montreal."
     type: "talk"
 
   - date: "2024"
     title: "New paper in Nature Ecology & Evolution"
     text: "Published findings on functional convergence of genomic and transcriptomic architecture underlying sociability in guppies."
-    type: "paper"
-
-  - date: "2023"
-    title: "New paper in Nature Communications"
-    text: "Evolution of schooling drives changes in neuroanatomy and motion characteristics across predation contexts."
     type: "paper"
 
 team:
@@ -182,6 +188,7 @@ team:
     since: "2025"
     status: current
     photo: ""
+    emoji: "🤖"
     bio: "Working on transcriptomic analyses of guppy mate preference for orange coloration."
 
   - name: "Bruno Camargo dos Santos"
