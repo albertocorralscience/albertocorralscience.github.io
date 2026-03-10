@@ -14,15 +14,6 @@ site:
   bluesky: "@corrallopeza.bsky.social"  
   tagline: "Understanding the neural and molecular bases of mating decisions and social behavior"
 
-stats:
-  - number: "21"
-    label: "Publications"
-  - number: "13"
-    label: "H-index"
-  - number: "746"
-    label: "Citations"
-  - number: "7+"
-    label: "Research Grants"
 
 about: >
   I am a researcher at the Department of Ecology and Genetics at Uppsala University,
