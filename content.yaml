@@ -28,8 +28,8 @@ research:
   - title: "The molecular evolution of mating tactics in water striders"
     emoji: "🪲"
     color: "teal"
-    photo: ""     # e.g. "img/waterstrider.jpg" — upload photo to GitHub, put filename here
-    link: ""      # optional URL to a project page or key paper
+    photo: "striderphylo.png"     # e.g. "img/waterstrider.jpg" — upload photo to GitHub, put filename here
+    link: "https://www.vr.se/english/swecris.html#/project/2025-05332_VR"      # optional URL to a project page or key paper
     description: >
       Funded by a Swedish Research Council Starting Grant, this project investigates
       the genetic regulation of mating behaviors in water striders. We integrate
@@ -37,53 +37,39 @@ research:
       and comparative transcriptomics across multiple water strider species.
     tags: ["Water striders", "Genomics", "Mating tactics"]
 
-  - title: "Neural basis of collective behavior"
+  - title: "Brain size, cognition & sexual selection"
+    emoji: ""🧠""
+    color: "yellow"
+    photo: "thesis.png"
+    link: ""
+    description: >
+      A long-standing research direction showing that enhanced cognitive ability associated with larger brains alters
+      mating decisions. This research  been funded by the Birgitta Sintring Foundation and the Royal Swedish Academy of Sciences
+      to explain how environmental variation modulates the neural and molecular mechanisms regulating mating decisions.
+    tags: ["Brain size", "Guppies", "Sexual selection"]
+
+  - title: "Neural and molecular basis of social behavior"
     emoji: "🐟"
     color: "orange"
-    photo: ""
+    photo: "collective.png"
     link: ""
     description: >
-      Using guppies selectively bred for schooling behavior, we identified how evolution
-      of coordinated motion is linked to changes in brain anatomy and gene regulatory
-      architecture — particularly in genes involved in neuronal migration and synaptic
-      processes within the social decision-making network.
-    tags: ["Schooling", "Neuroanatomy", "Transcriptomics", "Nat Comm / Nat Eco Evo"]
-
-  - title: "Predation-driven evolution of social cognition"
-    emoji: "🧠"
-    color: "green"
-    photo: ""
-    link: ""
-    description: >
-      Funded by the Birgitta Sintring Foundation, we examine how strong selective
-      pressure from predation shapes molecular changes underlying social cognition,
-      using guppies bred for survival and the cooperatively breeding cichlid
-      Neolamprologus pulcher to dissect social hierarchy mechanisms.
-    tags: ["Predation", "Social cognition", "Cichlids", "Gene regulation"]
-
-  - title: "Brain size, cognition & sexual selection"
-    emoji: "💡"
-    color: "yellow"
-    photo: ""
-    link: ""
-    description: >
-      A long-standing research direction using experimentally evolved guppy lines
-      to show that enhanced cognitive ability associated with larger brains alters
-      mating decisions — providing mechanistic evidence that cognitive evolution
-      can shape sexual selection dynamics.
-    tags: ["Brain size", "Guppies", "Sexual selection", "Science Advances"]
+      Funded by the Birgitta Sintring, Lars Hierta Memorial and Nilsson-Ehle Foundations, we use 
+      well-established fish model systems and integrate automated high-throughput behavioral tracking, 
+      targeted brain-region sampling, transcriptomics, and experimental evolution approaches for 
+      investigating how social structure and ecological pressures influence neural and genomic regulation of behavior.
+    tags: ["Schooling", "Neuroanatomy", "Transcriptomics"]
 
   - title: "Computer vision across evolutionary systems"
     emoji: "👁️"
     color: "teal"
-    photo: ""
+    photo: "computools.png"
     link: ""
     description: >
       Applied computational phenotyping to diverse systems: quantifying flight pattern
-      mimicry in Neotropical glasswing butterflies, risk-taking behavior in amphibians,
-      and deep-learning-based tracking of fish behavior for high-resolution behavioral
-      quantification.
-    tags: ["Computer vision", "Deep learning", "Mimicry", "Amphibians"]
+      mimicry in insects, risk-taking behavior in amphibians, and tracking of fish behavior 
+      for high-resolution behavioral quantification.
+    tags: ["Computer vision", "Tracking", "Amphibians"]
 
 publications:
   # To link a paper, add:  doi: "10.xxxx/xxxxx"   (just the DOI number, not the full URL)
